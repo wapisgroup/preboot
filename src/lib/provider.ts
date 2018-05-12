@@ -14,8 +14,7 @@ import {
   PLATFORM_ID
 } from '@angular/core';
 import {DOCUMENT, isPlatformBrowser, isPlatformServer} from '@angular/common';
-import {take} from 'rxjs/operators/take';
-import {filter} from 'rxjs/operators/filter';
+import {filter, take} from 'rxjs/operators';
 
 import {EventReplayer} from './api/event.replayer';
 import {PREBOOT_NONCE} from './common/tokens';
@@ -27,7 +26,7 @@ export const PREBOOT_OPTIONS = new InjectionToken<PrebootOptions>('PrebootOption
 
 export function PREBOOT_FACTORY(doc: Document,
                                 prebootOpts: PrebootOptions,
-                                nonce: string|null,
+                                nonce: string | null,
                                 platformId: Object,
                                 appRef: ApplicationRef,
                                 eventReplayer: EventReplayer) {
