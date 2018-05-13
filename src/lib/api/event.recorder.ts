@@ -324,7 +324,7 @@ export function getSelection(node: HTMLInputElement): PrebootSelection {
     if (node.selectionStart || node.selectionStart === 0) {
       selection.start = node.selectionStart;
       selection.end = node.selectionEnd ? node.selectionEnd : 0;
-      selection.direction = node.selectionDirection ? node.selectionDirection : 'none';
+      selection.direction = node.selectionDirection ? node.selectionDirection : '';
     }
   } catch (ex) {}
 
